@@ -1,0 +1,48 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.env.*
+.venv
+
+# Database
+*.sqlite3
+*.db
+
+# Django
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+*.log
+local_settings.py
+db.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Static files (if collected)
+staticfiles/
+
+# Cache
+cache/
+
+# Environment files (except .env.example)
+.env
+!.env.example
+
+

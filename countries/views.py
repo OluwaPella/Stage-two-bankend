@@ -119,16 +119,8 @@ class StatusView(View):
 class CountriesImageView(View):
     def get(self, request):
         image_path = os.path.join(settings.BASE_DIR, 'cache', 'summary.png')
-        text_path = os.path.join(settings.BASE_DIR, 'cache', 'summary.txt')
         
         if not os.path.exists(image_path):
-            if os.path.exists(text_path):
-                # Return text summary if image not available
-                with open(text_path, 'r') as f:
-                    return JsonResponse({
-                        'message': 'Image not available, but text summary exists',
-                        'summary': f.read()
-                    })
             return JsonResponse({'error': 'Summary image not found'}, status=404)
         
         try:
